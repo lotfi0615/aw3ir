@@ -1,0 +1,30 @@
+ body { 
+    background-color:gray;
+}
+table {
+    background-color: blanchedalmond;
+}
+
+
+#lien:hover {
+
+background-color: orange;
+
+}
+
+tr:nth-child(odd) {
+    background-color: brown;}
+tr:nth-child(even) {
+    background-color: blue;}
+  tr:hover {
+    background-color: #ffcc00;}
+   
+    img:hover{
+        transform: scale(3);
+        }
+
+        @media (max-width: 600px){
+            body {
+                background-color: #87CEEB;
+            }
+          }
