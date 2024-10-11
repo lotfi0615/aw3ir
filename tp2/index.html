@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html>
+<!-- <!DOCTYPE html>
+<!-- <html>
 
 <head>
   <meta charset="utf-8" />
@@ -11,7 +11,7 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   <!-- Place favicon.ico in the root directory -->
 
-  <style>
+<!-- <style>
     body {
       background-color: #e9ebee;
       font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco",
@@ -23,9 +23,9 @@
   </style>
 
   <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
-  <!--<link rel="stylesheet" href="style.css">-->
-  <!--<script src="js/main.js"></script>-->
-</head>
+<!--<link rel="stylesheet" href="style.css">-->
+<!--<script src="js/main.js"></script>-->
+<!-- </head>
 
 <body>
   <nav>
@@ -33,8 +33,96 @@
   </nav>
   <h1>tp2</h1>
   <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
+<!-- <p>Hello world! This is HTML5 Boilerplate.</p>
   <img src="../galilee.png" alt="Logo Galilee" />
 </body>
 
+</html>  --> --> -->
+
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF_8" />
+  <title>formulaire Inscription</title>
+  <style type="text/css">
+    td {
+      height: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <form action="action.html" method="get">
+    <!-- votre code html avec tous les champs de saisie-->
+
+
+    <fieldset>
+      <legend>fomulaire d'inscription</legend>
+      <!-- La balise Table pour formater l'affichage du formulaire -->
+      <table>
+        <p>
+          <label>Nom</label>
+          <input type="text" name="Nom" placeholder="saisir votre nom" />
+          <span class="icon-ok">✔</span>
+        </p>
+        <tr>
+          <td><label>Prenom</label></td>
+          <td><input type="text" name="Prenom" placeholder="saisir votre prenom" /></td>
+        </tr>
+        <tr>
+          <td><label>Email</label></td>
+          <td><input type="email" name="Email" placeholder="saisir votre Email" /></td>
+        </tr>
+        <tr>
+          <td> Sexe </td>
+          <!-- Les deux inputs radio doivent avoir le meme nom -->
+          <td>
+            Masculin <input type="radio" name="sexe" value="M">
+            Féminin <input type="radio" name="sexe" value="F" checked="checked">
+          </td>
+        </tr>
+        <tr>
+          <!-- Pour réstreindre le type des fichiers on utilise l'attribut "accept" -->
+          <td><label>Photo</label></td>
+          <td><input type="file" name="photo accept=" image/jpeg,image/png"></td>
+        </tr>
+        <tr>
+          <td><label>Pays</label></td>
+          <td>
+            <select>
+              <option>France</option>
+              <option>Espagne</option>
+              <option>Italie</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <!-- l'utilisation l'attribut multiple permet le choix de plusieurs valeurs des options -->
+          <td>Les langages préferés </td>
+          <td><select multiple="multiple">
+              <option>Java</option>
+              <option>C</option>
+              <option>C++</option>
+              <option>PHP</option>
+              <option>HTML</option>
+            </select> (Pour faire plusieurs choix maintenir la touche CTRL enfoncée)</td>
+        </tr>
+
+        <tr>
+          <td><label>Domaines d'actvités</label></td>
+          <td><input type="checkbox"> Informatique <input type="checkbox"> Gestion <input type="checkbox"> Pédagogie
+          </td>
+        </tr>
+        <tr>
+          <td><input type="submit" value="Envoyer" /> <input type="reset" value="Annuler" /></td>
+        </tr>
+      </table>
+    </fieldset>
+  </form>
+</body>
+
 </html>
+
+<input type="submit" value="Envoyer " />
+<input type="reset" value="Annuler" />
