@@ -1,128 +1,51 @@
-<!-- <!DOCTYPE html>
-<!-- <html>
+<!DOCTYPE html>
+<html lang="fr">
 
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <title>TP2</title>
-  <meta name="description" content="" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-  <!-- Place favicon.ico in the root directory -->
-
-<!-- <style>
-    body {
-      background-color: #e9ebee;
-      font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco",
-        "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-      font-size: 16px;
-      margin: 0 auto;
-      max-width: 800px;
-    }
-  </style>
-
-  <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
-<!--<link rel="stylesheet" href="style.css">-->
-<!--<script src="js/main.js"></script>-->
-<!-- </head>
-
-<body>
-  <nav>
-    <a href="..">🏠 Index</a> / TP2
-  </nav>
-  <h1>tp2</h1>
-  <!-- Add your site or application content here -->
-<!-- <p>Hello world! This is HTML5 Boilerplate.</p>
-  <img src="../galilee.png" alt="Logo Galilee" />
-</body>
-
-</html>  --> --> -->
-
-<!doctype html>
-<html>
-
-<head>
-  <meta charset="UTF_8" />
-  <title>formulaire Inscription</title>
-  <style type="text/css">
-    td {
-      height: 40px;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TP #2</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+  <h1>TP #2</h1>
   <form action="action.html" method="get">
-    <!-- votre code html avec tous les champs de saisie-->
+
+    <label for="name">Nom:</label>
+    <input type="text" id="name" name="name" minlength="2" maxlength="20" required>
+    <span class="icon-ok">✔️</span>
+    <span class="error-message">Veuillez entrer au moins 2 caractères.</span>
+    <br><br>
 
 
-    <fieldset>
-      <legend>fomulaire d'inscription</legend>
-      <!-- La balise Table pour formater l'affichage du formulaire -->
-      <table>
-        <p>
-          <label>Nom</label>
-          <input type="text" name="Nom" placeholder="saisir votre nom" />
-          <span class="icon-ok">✔</span>
-        </p>
-        <tr>
-          <td><label>Prenom</label></td>
-          <td><input type="text" name="Prenom" placeholder="saisir votre prenom" /></td>
-        </tr>
-        <tr>
-          <td><label>Email</label></td>
-          <td><input type="email" name="Email" placeholder="saisir votre Email" /></td>
-        </tr>
-        <tr>
-          <td> Sexe </td>
-          <!-- Les deux inputs radio doivent avoir le meme nom -->
-          <td>
-            Masculin <input type="radio" name="sexe" value="M">
-            Féminin <input type="radio" name="sexe" value="F" checked="checked">
-          </td>
-        </tr>
-        <tr>
-          <!-- Pour réstreindre le type des fichiers on utilise l'attribut "accept" -->
-          <td><label>Photo</label></td>
-          <td><input type="file" name="photo accept=" image/jpeg,image/png"></td>
-        </tr>
-        <tr>
-          <td><label>Pays</label></td>
-          <td>
-            <select>
-              <option>France</option>
-              <option>Espagne</option>
-              <option>Italie</option>
-            </select>
-          </td>
-        </tr>
-        <tr>
-          <!-- l'utilisation l'attribut multiple permet le choix de plusieurs valeurs des options -->
-          <td>Les langages préferés </td>
-          <td><select multiple="multiple">
-              <option>Java</option>
-              <option>C</option>
-              <option>C++</option>
-              <option>PHP</option>
-              <option>HTML</option>
-            </select> (Pour faire plusieurs choix maintenir la touche CTRL enfoncée)</td>
-        </tr>
+    <label for="firstname">Prénom:</label>
+    <input type="text" id="firstname" name="firstname" minlength="2" maxlength="20" required>
+    <span class="icon-ok">✔️</span>
+    <span class="error-message">Veuillez entrer au moins 2 caractères.</span>
+    <br><br>
 
-        <tr>
-          <td><label>Domaines d'actvités</label></td>
-          <td><input type="checkbox"> Informatique <input type="checkbox"> Gestion <input type="checkbox"> Pédagogie
-          </td>
-        </tr>
-        <tr>
-          <td><input type="submit" value="Envoyer" /> <input type="reset" value="Annuler" /></td>
-        </tr>
-      </table>
-    </fieldset>
+
+    <label for="birthday">Date de naissance:</label>
+    <input type="date" id="birthday" name="birthday" required>
+    <span class="icon-ok">✔️</span>
+    <br><br>
+
+
+    <label for="address">Adresse:</label>
+    <input type="text" id="address" name="address" required>
+    <span class="icon-ok">✔️</span>
+    <br><br>
+
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <span class="icon-ok">✔️</span>
+    <br><br>
+
+
+    <input type="submit" value="Envoyer">
   </form>
 </body>
 
 </html>
-
-<input type="submit" value="Envoyer " />
-<input type="reset" value="Annuler" />
