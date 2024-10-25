@@ -16,7 +16,12 @@
 <body>
     <div id="weatherApp" class="container mt-5">
         <h1 class="text-center">WebAPP Météo</h1>
-
+        <nav class="navbar navbar-light bg-light">
+            <div class="container d-flex justify-content-between align-items-center">
+                <a class="navbar-brand" href="..">🏠 Index</a>
+                <img src="../galilee.png" alt="Logo Galilee" class="small-image" />
+            </div>
+        </nav>
 
         <!-- Formulaire de saisie de ville -->
         <form v-on:submit="addCity">
