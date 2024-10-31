@@ -1,5 +1,4 @@
 # Editor configuration, see https://editorconfig.org
-@import "bootstrap/dist/css/bootstrap.min.css";
 root = true
 
 [*]

@@ -39,7 +39,12 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "server": "src/main.server.ts",
+            "prerender": true,
+            "ssr": {
+              "entry": "server.ts"
+            }
           },
           "configurations": {
             "production": {
@@ -104,6 +109,6 @@
     }
   },
   "cli": {
-    "analytics": "0fabdfb6-280a-4002-9f24-c5611a980e79"
+    "analytics": false
   }
 }

@@ -8,4 +8,3 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = "⛅ Weather webapp @Master 3ir²";
 }
-
