@@ -15,15 +15,10 @@
     <div class="card-header">
       {{ meteo.name }} / {{ meteo.dt * 1000 | date: "EEEE d LLLL HH:mm" }}
     </div>
-    <a
-      href="http://maps.google.com/maps?q={{ latlon }}&ll={{ latlon }}&z=5"
-      target="_blank"
-    >
-      <img
-        class="card-img-top"
+    <a href="http://maps.google.com/maps?q={{ latlon }}&ll={{ latlon }}&z=5" target="_blank">
+      <img class="card-img-top"
         src="https://maps.googleapis.com/maps/api/staticmap?markers={{ latlon }}&zoom=5&size=400x300&scale=2&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg"
-        alt="Carte de la ville"
-      />
+        alt="Carte de la ville" />
     </a>
     <div class="card-body">
       <h5 class="card-title">
@@ -56,17 +51,32 @@
 </div>
 
 <!-- Affichage des prévisions sur 5 jours -->
-<h3>Prévisions sur 5 jours</h3>
-<div *ngIf="fiveDayForecast.length > 0">
-  <div *ngFor="let forecast of fiveDayForecast">
-    <p>Date : {{ forecast.dt_txt | date: 'fullDate' }}</p>
-    <p>Température : {{ forecast.main.temp }} °C</p>
-    <p>Conditions : {{ forecast.weather[0].description }}</p>
-    <hr />
+<h3 class="text-center my-4">Prévisions sur 5 jours</h3>
+<div *ngIf="fiveDayForecast.length > 0" class="forecast-container d-flex flex-wrap justify-content-center">
+  <div *ngFor="let forecast of fiveDayForecast" class="forecast-card card m-2 shadow-sm"
+    style="width: 250px; border: 1px solid #ddd; border-radius: 8px;">
+    <div class="card-body text-center">
+      <!-- Date de la prévision -->
+      <h5 class="card-title font-weight-bold">
+        {{ forecast.dt_txt | date: 'EEEE d MMMM' }}
+      </h5>
+      <!-- Température et icône météo -->
+      <p class="display-6 my-2">
+        <i [ngClass]="'wi wi-owm-day-' + forecast.weather[0].id"></i>
+        {{ forecast.main.temp }}°C
+      </p>
+      <!-- Description des conditions météo -->
+      <p class="card-text text-muted">{{ forecast.weather[0].description | titlecase }}</p>
+      <!-- Autres informations comme humidité et vent -->
+      <ul class="list-unstyled my-3">
+        <li><i class="wi wi-humidity"></i> Humidité : {{ forecast.main.humidity }}%</li>
+        <li><i class="wi wi-strong-wind"></i> Vent : {{ forecast.wind.speed }} km/h</li>
+      </ul>
+    </div>
   </div>
 </div>
 
 <!-- Message d'erreur -->
-<div class="alert alert-danger" *ngIf="meteo && meteo.cod != 200">
-  {{ meteo.message }} (erreur {{ meteo.cod }})
+<div class="alert alert-danger text-center mt-3" *ngIf="meteo && meteo.cod != 200">
+  <strong>Erreur :</strong> {{ meteo.message }} (Code : {{ meteo.cod }})
 </div>
